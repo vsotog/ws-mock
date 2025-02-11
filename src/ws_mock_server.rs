@@ -282,7 +282,7 @@ impl WsMockServer {
     pub async fn start() -> WsMockServer {
         let ready_notify = Arc::new(Notify::new());
         let state = Arc::new(RwLock::new(ServerState::new(
-            "127.0.0.1".to_string(),
+            "0.0.0.0".to_string(),
             0,
             ready_notify.clone(),
         )));
